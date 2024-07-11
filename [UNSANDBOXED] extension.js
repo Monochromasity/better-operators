@@ -25,6 +25,22 @@
                 type: Scratch.ArgumentType.NUMBER
               }
             }
+          },
+          {
+            opcode: 'betterplus',
+            blockType: Scratch.BlockType.REPORTER,
+            text: '[ONE] + [TWO] + [THREE]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+              TWO: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+              THREE: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+            }
           }
         ]
       };
@@ -32,6 +48,9 @@
 
     plus(args) {
       return args.ONE + args.TWO;
+    },
+    betterplus(args) {
+      return args.ONE + args.TWO + args.THREE;
     }
   }
   Scratch.extensions.register(new monobetterops());
