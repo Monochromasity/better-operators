@@ -1,6 +1,6 @@
-// Name: Better Operations
+// Name: Better Operators
 // ID: monobetterops
-// Description: Better Operations tab, mainly for use instead of the normal Operations tab. It includes all blocks in the standard Operations tab. (Made using the TW/PM Extension Template by Monochromasity on GitHub.)
+// Description: Better Operators tab, mainly for use instead of the normal Operators tab. It includes all blocks in the standard Operators tab. (Made using the TW/PM Extension Template by Monochromasity on GitHub.)
 // By: Monochromasity
 
 (function (Scratch) {
@@ -10,7 +10,7 @@
     getInfo() {
       return {
         id: 'monobetterops',
-        name: 'Better Operations',
+        name: 'Better Operators',
         color1: '#59c059',
         blocks: [
           {
