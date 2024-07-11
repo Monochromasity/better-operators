@@ -1,29 +1,27 @@
-// Name: Example
-// ID: replitexamplejs
-// Description: Example extension for GitHub's "TW/PM Extension Template" (template by Monochromasity). (<--- remove this bit, dont remove this bit --->) Made using the TW/PM Extension Template by Monochromasity on GitHub.
+// Name: Better Operations
+// ID: monobetterops
+// Description: Better Operations tab, mainly for use instead of the normal Operations tab. It includes all blocks in the standard Operations tab. (Made using the TW/PM Extension Template by Monochromasity on GitHub.)
 // By: You :)
 
 (function (Scratch) {
   "use strict";
 
-  class ExampleExtension {
+  class monobetterops {
     getInfo() {
       return {
-        id: 'replitexamplejs',
-        name: 'Example',
+        id: 'monobetterops',
+        name: 'Better Operations',
         blocks: [
           {
-            opcode: 'example',
+            opcode: 'plus',
             blockType: Scratch.BlockType.REPORTER,
-            text: 'join [ONE] [TWO]',
+            text: '[ONE] + [TWO]',
             arguments: {
               ONE: {
-                type: Scratch.ArgumentType.STRING,
-                defaultValue: 'apple '
+                type: Scratch.ArgumentType.STRING
               },
               TWO: {
-                type: Scratch.ArgumentType.STRING,
-                defaultValue: 'banana'
+                type: Scratch.ArgumentType.STRING
               }
             }
           }
@@ -31,12 +29,9 @@
       };
     }
 
-    example(args) {
-      let one = args.ONE
-      let two = args.TWO
-      let join = one.concat(two)
-      return join;
+    plus(args) {
+      return args.ONE + args.TWO;
     }
   }
-  Scratch.extensions.register(new ExampleExtension());
+  Scratch.extensions.register(new monobetterops());
 })(Scratch);
