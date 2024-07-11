@@ -48,7 +48,7 @@
 
     plus(args) {
       return args.ONE + args.TWO;
-    },
+    }
     betterplus(args) {
       return args.ONE + args.TWO + args.THREE;
     }
