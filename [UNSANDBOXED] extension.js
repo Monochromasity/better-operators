@@ -30,7 +30,7 @@
     }
 
     plus(args) {
-      return args.ONE + args.TWO;
+      return parseInt(args.ONE, 10) + parseInt(args.TWO, 10);
     }
   }
   Scratch.extensions.register(new monobetterops());
