@@ -18,10 +18,12 @@
             text: '[ONE] + [TWO]',
             arguments: {
               ONE: {
-                type: Scratch.ArgumentType.NUMBER
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: ''
               },
               TWO: {
-                type: Scratch.ArgumentType.NUMBER
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: ''
               }
             }
           }
