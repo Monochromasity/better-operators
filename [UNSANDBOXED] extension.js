@@ -39,7 +39,7 @@
               },
               THREE: {
                 type: Scratch.ArgumentType.NUMBER
-              },
+              }
             }
           }
         ]
