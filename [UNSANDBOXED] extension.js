@@ -70,6 +70,64 @@
                 type: Scratch.ArgumentType.NUMBER
               }
             }
+          },
+          {
+            opcode: 'times',
+            blockType: Scratch.BlockType.REPORTER,
+            text: '[ONE] * [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+              TWO: {
+                type: Scratch.ArgumentType.NUMBER
+              }
+            }
+          },
+          {
+            opcode: 'bettertimes',
+            blockType: Scratch.BlockType.REPORTER,
+            text: '[ONE] * [TWO] * [THREE]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+              TWO: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+              THREE: {
+                type: Scratch.ArgumentType.NUMBER
+              }
+            }
+          },
+          {
+            opcode: 'divide',
+            blockType: Scratch.BlockType.REPORTER,
+            text: '[ONE] / [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+              TWO: {
+                type: Scratch.ArgumentType.NUMBER
+              }
+            }
+          },
+          {
+            opcode: 'betterdivide',
+            blockType: Scratch.BlockType.REPORTER,
+            text: '[ONE] / [TWO] / [THREE]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+              TWO: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+              THREE: {
+                type: Scratch.ArgumentType.NUMBER
+              }
+            }
           }
         ]
       };
@@ -86,6 +144,18 @@
     }
     betterminus(args) {
       return args.ONE - args.TWO - args.THREE;
+    }
+    times(args) {
+      return args.ONE * args.TWO;
+    }
+    bettertimes(args) {
+      return args.ONE * args.TWO * args.THREE;
+    }
+    divide(args) {
+      return args.ONE / args.TWO;
+    }
+    betterdivide(args) {
+      return args.ONE / args.TWO / args.THREE;
     }
   }
   Scratch.extensions.register(new monobetterops());
