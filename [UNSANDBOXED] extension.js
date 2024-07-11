@@ -11,6 +11,7 @@
       return {
         id: 'monobetterops',
         name: 'Better Operations',
+        color1: '#59c059',
         blocks: [
           {
             opcode: 'plus',
