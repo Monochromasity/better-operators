@@ -18,10 +18,10 @@
             text: '[ONE] + [TWO]',
             arguments: {
               ONE: {
-                type: Scratch.ArgumentType.STRING
+                type: Scratch.ArgumentType.NUMBER
               },
               TWO: {
-                type: Scratch.ArgumentType.STRING
+                type: Scratch.ArgumentType.NUMBER
               }
             }
           }
@@ -30,7 +30,7 @@
     }
 
     plus(args) {
-      return parseInt(args.ONE, 10) + parseInt(args.TWO, 10);
+      return args.ONE + args.TWO;
     }
   }
   Scratch.extensions.register(new monobetterops());
