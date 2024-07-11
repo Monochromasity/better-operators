@@ -1,7 +1,7 @@
 // Name: Better Operations
 // ID: monobetterops
 // Description: Better Operations tab, mainly for use instead of the normal Operations tab. It includes all blocks in the standard Operations tab. (Made using the TW/PM Extension Template by Monochromasity on GitHub.)
-// By: You :)
+// By: Monochromasity
 
 (function (Scratch) {
   "use strict";
