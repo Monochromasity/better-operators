@@ -128,6 +128,32 @@
                 type: Scratch.ArgumentType.NUMBER
               }
             }
+          },
+          {
+            opcode: 'exponent',
+            blockType: Scratch.BlockType.REPORTER,
+            text: '[ONE] ^ [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+              TWO: {
+                type: Scratch.ArgumentType.NUMBER
+              }
+            }
+          },
+          {
+            opcode: 'tetrate',
+            blockType: Scratch.BlockType.REPORTER,
+            text: '[ONE] tetrated by [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.NUMBER
+              },
+              TWO: {
+                type: Scratch.ArgumentType.NUMBER
+              }
+            }
           }
         ]
       };
@@ -156,6 +182,17 @@
     }
     betterdivide(args) {
       return args.ONE / args.TWO / args.THREE;
+    }
+    exponent(args) {
+      return args.ONE ** args.TWO;
+    }
+    tetrate(args) {
+      let one = args.ONE;
+      let result = one;
+      for (let i = 0; i < args.TWO; i++) {
+        result = result ** one;
+      }
+      return result;
     }
   }
   Scratch.extensions.register(new monobetterops());
