@@ -189,7 +189,7 @@
     tetrate(args) {
       let one = args.ONE;
       let result = one;
-      for (let i = 0; i < args.TWO; i++) {
+      for (let i = 1; i < args.TWO; i++) {
         result = result ** one;
       }
       return result;
