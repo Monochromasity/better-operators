@@ -211,7 +211,7 @@
       return result;
     }
     rand(args) {
-      let multiple = args.TWO + 1 - args.ONE
+      let multiple = args.TWO + 1 - args.ONE;
       return Math.floor(Math.random() * multiple) + args.ONE;
   }
   Scratch.extensions.register(new monobetterops());
