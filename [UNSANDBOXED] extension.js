@@ -163,11 +163,11 @@
             arguments: {
               ONE: {
                 type: Scratch.ArgumentType.NUMBER,
-                defaultValue: '1'
+                defaultValue: 1
               },
               TWO: {
                 type: Scratch.ArgumentType.NUMBER,
-                defaultValue: '10'
+                defaultValue: 10
               }
             }
           }
