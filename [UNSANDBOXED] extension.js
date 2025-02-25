@@ -154,6 +154,22 @@
                 type: Scratch.ArgumentType.NUMBER
               }
             }
+          },
+          '---',
+          {
+            opcode: 'rand',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'pick random [ONE] to [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: '1'
+              },
+              TWO: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: '10'
+              }
+            }
           }
         ]
       };
@@ -194,6 +210,9 @@
       }
       return result;
     }
+    rand(args) {
+      let multiple = args.TWO + 1 - args.ONE
+      return Math.floor(Math.random() * multiple) + args.ONE;
   }
   Scratch.extensions.register(new monobetterops());
 })(Scratch);
