@@ -170,6 +170,17 @@
                 defaultValue: '10'
               }
             }
+          },
+          {
+            opcode: 'randchar',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'pick random character from string [ONE]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: 'apple'
+              }
+            }
           }
         ]
       };
@@ -213,6 +224,8 @@
     rand(args) {
       return Math.floor(Math.random() * (args.TWO - (args.ONE - 1)) + args.ONE);
     }
+    randchar(args) {
+      return args.ONE.charAt(Math.floor(Math.random() * args.ONE.length) + 1);
   }
   Scratch.extensions.register(new monobetterops());
 })(Scratch);
