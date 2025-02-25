@@ -212,6 +212,7 @@
     }
     rand(args) {
       return Math.random() * (args.TWO - args.ONE) + args.ONE;
+    }
   }
   Scratch.extensions.register(new monobetterops());
 })(Scratch);
