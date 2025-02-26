@@ -305,6 +305,7 @@
               }
             }
           },
+          '---',
           {
             opcode: 'true',
             blockType: Scratch.BlockType.BOOLEAN,
@@ -314,6 +315,43 @@
             opcode: 'false',
             blockType: Scratch.BlockType.BOOLEAN,
             text: 'false'
+          },
+          '---',
+          {
+            opcode: 'and',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: '[ONE] and [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.BOOLEAN
+              },
+              TWO: {
+                type: Scratch.ArgumentType.BOOLEAN
+              }
+            }
+          },
+          {
+            opcode: 'or',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: '[ONE] or [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.BOOLEAN
+              },
+              TWO: {
+                type: Scratch.ArgumentType.BOOLEAN
+              }
+            }
+          },
+          {
+            opcode: 'not',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: 'not [ONE]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.BOOLEAN
+              }
+            }
           }
         ]
       };
@@ -395,6 +433,15 @@
     }
     false(args) {
       return false;
+    }
+    and(args) {
+      return args.ONE && args.TWO;
+    }
+    or(args) {
+      return args.ONE || args.TWO;
+    }
+    not(args) {
+      return !(args.ONE);
     }
   }
   Scratch.extensions.register(new monobetterops());
