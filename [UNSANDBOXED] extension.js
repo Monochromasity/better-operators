@@ -219,6 +219,101 @@
                 defaultValue: '0.5'
               }
             }
+          },
+          '---',
+          {
+            opcode: 'morethan',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: '[ONE] > [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.STRING
+              },
+              TWO: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: '50'
+              }
+            }
+          },
+          {
+            opcode: 'moreequal',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: '[ONE] ≥ [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.STRING
+              },
+              TWO: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: '50'
+              }
+            }
+          },
+          {
+            opcode: 'lessthan',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: '[ONE] < [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.STRING
+              },
+              TWO: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: '50'
+              }
+            }
+          },
+          {
+            opcode: 'lessequal',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: '[ONE] ≤ [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.STRING
+              },
+              TWO: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: '50'
+              }
+            }
+          },
+          {
+            opcode: 'equal',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: '[ONE] = [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.STRING
+              },
+              TWO: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: '50'
+              }
+            }
+          },
+          {
+            opcode: 'inequal',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: '[ONE] ≠ [TWO]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.STRING
+              },
+              TWO: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: '50'
+              }
+            }
+          },
+          {
+            opcode: 'true',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: 'true'
+          },
+          {
+            opcode: 'false',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: 'false'
           }
         ]
       };
@@ -276,6 +371,30 @@
     }
     interpolate(args) {
       return Math.abs(args.ONE - args.TWO) * args.THREE + args.ONE;
+    }
+    morethan(args) {
+      return args.ONE > args.TWO;
+    }
+    moreequal(args) {
+      return args.ONE >= args.TWO;
+    }
+    lessthan(args) {
+      return args.ONE < args.TWO;
+    }
+    lessequal(args) {
+      return args.ONE <= args.TWO;
+    }
+    equal(args) {
+      return args.ONE == args.TWO;
+    }
+    inequal(args) {
+      return args.ONE != args.TWO;
+    }
+    true(args) {
+      return true;
+    }
+    false(args) {
+      return false;
     }
   }
   Scratch.extensions.register(new monobetterops());
