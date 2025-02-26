@@ -181,6 +181,25 @@
                 defaultValue: 'apple'
               }
             }
+          },
+          {
+            opcode: 'constrain',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'constrain [ONE] min [TWO] max [THREE]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: '50'
+              },
+              TWO: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: '1'
+              },
+              THREE: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: '100'
+              }
+            }
           }
         ]
       };
@@ -226,6 +245,15 @@
     }
     randchar(args) {
       return args.ONE.charAt(Math.floor(Math.random() * args.ONE.length));
+    }
+    constrain(args) {
+      if (args.ONE < args.TWO) {
+        return args.TWO;
+      } else if (args.ONE > args.THREE) {
+        return args.THREE;
+      } else {
+        return args.ONE;
+      }
     }
   }
   Scratch.extensions.register(new monobetterops());
