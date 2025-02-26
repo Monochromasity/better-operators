@@ -200,6 +200,25 @@
                 defaultValue: '100'
               }
             }
+          },
+          {
+            opcode: 'interpolate',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'interpolate [ONE] to [TWO] by [THREE]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: '1'
+              },
+              TWO: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: '3'
+              },
+              THREE: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: '0.5'
+              }
+            }
           }
         ]
       };
@@ -254,6 +273,9 @@
       } else {
         return args.ONE;
       }
+    }
+    interpolate(args) {
+      return Math.abs(args.ONE - args.TWO) * args.THREE + args.ONE;
     }
   }
   Scratch.extensions.register(new monobetterops());
