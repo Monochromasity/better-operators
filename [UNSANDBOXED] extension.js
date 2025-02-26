@@ -225,7 +225,7 @@
       return Math.floor(Math.random() * (args.TWO - (args.ONE - 1)) + args.ONE);
     }
     randchar(args) {
-      return args.ONE.charAt(Math.floor(Math.random() * args.ONE.length) + 1);
+      return args.ONE.charAt(Math.floor(Math.random() * args.ONE.length));
     }
   }
   Scratch.extensions.register(new monobetterops());
