@@ -352,8 +352,26 @@
                 type: Scratch.ArgumentType.BOOLEAN
               }
             }
+          },
+          '---',
+          {
+            opcode: 'spchar',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'insert special character [ONE]',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.STRING,
+                menu: 'SPCHAR'
+              }
+            }
           }
-        ]
+        ],
+        menus: {
+          SPCHAR: {
+            acceptReporters: true,
+            items: ['new line', 'tab', 'invisible character', 'section', 'plus or minus']
+          }
+        }
       };
     }
 
@@ -442,6 +460,16 @@
     }
     not(args) {
       return !(args.ONE);
+    }
+    spchar(args) {
+      let menu = ['new line', 'tab', 'invisible character', 'section', 'plus or minus'];
+      let chars = ['
+', '	', '️', '§', '±'];
+      if (menu.includes(args.ONE.toString.toLowercase)) {
+        return chars[menu.indexOf(args.ONE)];
+      } else {
+        return undefined;
+      }
     }
   }
   Scratch.extensions.register(new monobetterops());
