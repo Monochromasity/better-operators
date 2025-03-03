@@ -464,8 +464,9 @@
     spchar(args) {
       let menu = ['new line', 'tab', 'invisible character', 'section', 'plus or minus'];
       let chars = ['<br>', '	', '️', '§', '±'];
-      if (menu.includes(args.ONE.toString().toLowercase())) {
-        return chars[menu.indexOf(args.ONE.toString.toLowercase)];
+      let str = args.ONE.toString();
+      if (menu.includes(str.toLowercase())) {
+        return chars[menu.indexOf(str.toLowercase())];
       } else {
         return undefined;
       }
