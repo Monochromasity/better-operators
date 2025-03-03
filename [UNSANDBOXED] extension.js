@@ -465,8 +465,8 @@
       let menu = ['new line', 'tab', 'invisible character', 'section', 'plus or minus'];
       let chars = ['<br>', '	', '️', '§', '±'];
       let str = args.ONE.toString();
-      if (menu.includes(str.toLowercase())) {
-        return chars[menu.indexOf(str.toLowercase())];
+      if (menu.includes(str.toLowerCase())) {
+        return chars[menu.indexOf(str.toLowerCase())];
       } else {
         return undefined;
       }
