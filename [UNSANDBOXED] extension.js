@@ -364,6 +364,19 @@
                 menu: 'SPCHAR'
               }
             }
+          },
+          {
+            opcode: 'sepnewline',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'separate [ONE] from [TWO] with new line',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.STRING
+              },
+              TWO: {
+                type: Scratch.ArgumentType.STRING
+              }
+            }
           }
         ],
         menus: {
@@ -470,6 +483,9 @@
       } else {
         return undefined;
       }
+    }
+    sepnewline(args) {
+      return args.ONE + '\n' + args.TWO;
     }
   }
   Scratch.extensions.register(new monobetterops());
