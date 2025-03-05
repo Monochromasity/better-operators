@@ -424,7 +424,13 @@
       return result;
     }
     rand(args) {
-      return Math.floor(Math.random() * (args.TWO - (args.ONE - 1)) + args.ONE);
+      if (args.ONE.includes('.')) {
+        return Math.random() * (args.TWO - (args.ONE - 1)) + args.ONE;
+      } else if (args.TWO.includes('.')) {
+        return Math.random() * (args.TWO - (args.ONE - 1)) + args.ONE;
+      } else {
+        return Math.floor(Math.random() * (args.TWO - (args.ONE - 1)) + args.ONE);
+      }
     }
     randchar(args) {
       return args.ONE.charAt(Math.floor(Math.random() * args.ONE.length));
