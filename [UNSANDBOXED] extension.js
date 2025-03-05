@@ -424,9 +424,11 @@
       return result;
     }
     rand(args) {
-      if (args.ONE.includes('.')) {
+      let one = args.ONE;
+      let two = args.TWO;
+      if (one.includes('.')) {
         return Math.random() * (args.TWO - (args.ONE - 1)) + args.ONE;
-      } else if (args.TWO.includes('.')) {
+      } else if (one.includes('.')) {
         return Math.random() * (args.TWO - (args.ONE - 1)) + args.ONE;
       } else {
         return Math.floor(Math.random() * (args.TWO - (args.ONE - 1)) + args.ONE);
