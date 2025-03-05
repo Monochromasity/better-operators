@@ -424,8 +424,8 @@
       return result;
     }
     rand(args) {
-      let one = args.ONE;
-      let two = args.TWO;
+      let one = args.ONE.toString();
+      let two = args.TWO.toString();
       if (one.includes('.')) {
         return Math.random() * (args.TWO - (args.ONE - 1)) + args.ONE;
       } else if (one.includes('.')) {
